@@ -111,7 +111,12 @@ fun RotationProgressCard() {
                 Text(text = "${(progress * 100).toInt()}%", color = MiuixTheme.colorScheme.primary, fontWeight = FontWeight.Medium)
             }
             Spacer(modifier = Modifier.height(8.dp))
-            LinearProgressIndicator(progress = { progress }, modifier = Modifier.fillMaxWidth().height(8.dp), color = MiuixTheme.colorScheme.primary)
+            LinearProgressIndicator(
+                progress = { progress },
+                modifier = Modifier.fillMaxWidth().height(8.dp),
+                color = MiuixTheme.colorScheme.primary,
+                trackColor = MiuixTheme.colorScheme.surfaceContainerHighest
+            )
             Spacer(modifier = Modifier.height(8.dp))
             Row(modifier = Modifier.fillMaxWidth()) {
                 Text(text = "已用: $elapsedText", color = MiuixTheme.colorScheme.onSurface, fontSize = 12.sp)
